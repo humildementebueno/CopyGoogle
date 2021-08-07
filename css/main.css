@@ -6,6 +6,9 @@ body{
     font-size: 13px;
     font-family: Arial, Helvetica, sans-serif;
 }
+a {
+    text-decoration: none;/*quitamos la decoracion osea el subrayado*/
+}
 
 header{
     width: 100%;
@@ -14,4 +17,135 @@ header{
 header nav{
     display: flex;
     justify-content: flex-end;
+}
+
+header nav .nav-right-section{
+    width: 250px;
+    height: auto; /* aqui auto porque el padre ya tiene una altura de 60 */
+    display: flex;
+    list-style: none;/*quita los puntos de la lista*/
+    justify-content: center;
+    align-items: center;
+}
+nav .nav-right-section a {
+    margin-right: 10px;
+    color: #000000;
+}
+nav .nav-right-section .menu-icon{
+    background-image: url('https://static.thenounproject.com/png/756729-200.png');
+    background-repeat: no-repeat;/*para que no se repita la imagen y encaje en una sola imagen*/
+    background-position:center;
+    background-size: contain;/*para que se aproxime al tamaño del contenedor*/
+    width: 25px;
+    height: 25px;
+}
+
+nav .nav-right-section img{
+    border-radius: 50%;/*saca los bordes de mi perfil para circular*/
+    margin-left: 10px;
+}
+main {
+    margin-top: 150px;
+    text-align: center;
+}
+
+main .main-logo{
+    width: 530px;
+    margin: 0 auto;/*cuando pones auto divide lo que le sobra entre 2*/
+    margin-bottom: 35px;
+}
+main .main-logo img{
+    width: 300px;
+}
+main .main-input{
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+    
+}
+main .main-input-container{
+    width: 525px;
+    border-radius: 100px;
+    border: 1px solid #f0f1f3;
+    display: flex;/*flex nos ayudara a comodar en el centro*/
+    justify-content: center;/*justifica al centro*/
+    align-items: center;/*alinea los elementos*/
+}
+main .main-input input{
+    width: 450px;
+    height: 40px;
+    border: none;/*quitamos el border que venia por defecto*/
+    outline: none;/*quitamos el borde azul*/
+}
+main .main-input-container:hover{/*con css el hover es un efecto*/
+/*el triger dice que si pasa por es eleemento se hace algo*/
+    box-shadow: 0 1px 6px 0 #20212447;
+    border-color: #dfe1e500;
+}
+main .main-input .search-icon{
+    background-image: url('https://img.icons8.com/android/24/000000/search.png');
+    background-repeat: no-repeat;/* no te repitas*/
+    background-position:center;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+}
+main .main-input .micro-icon{
+    background-image: url('https://www.gstatic.com/images/branding/googlemic/2x/googlemic_color_24dp.png');
+    background-repeat: no-repeat;/* no te repitas*/
+    background-position:center;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+    cursor:pointer;/*activa la manita del cursor en la imagen*/
+}
+main .main-buttons{
+    width: 530px;
+    margin: 0 auto;/*se acomode al centro*/
+}
+main .main-buttons div{
+    display: inline-block;/*acomoda en fila los botones*/
+}
+main .main-buttons button{
+    height: 36px;
+    background-color: #f2f2f2;
+    border: 0;
+    font-size: 14px;
+    color: #5f6368;
+    border-radius: 5px;
+    padding: 0 15px;/*0 es ariiba y abajo, 15 es derecha a izquierda*/
+    margin-right: 15px;
+}
+main .main-buttons button:hover{
+    border: 1px solid #e0e2e6;/*solido para que se note*/
+    box-shadow: 0 1px 1px #000001;
+    color: #222;
+}
+footer{
+    width: 100%;
+    height: 50px;
+    position: absolute;/*para que se quede abajo de la pantalla todo el tiempo */
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;/*divira en 2 fraciones*/
+    align-items: center;
+    font-size: 13px;
+    background:#f2f2f2;
+    border-top: 1px solid #f0f0f1;
+}
+footer ul{
+    margin: 10px;
+    list-style: none;/*resetear el estilo que traia por defecto*/
+    display: flex;
+    padding-left: 0;
+}
+footer .footer-left {
+    justify-self: left;/*todo es ul se ira a la izquierda*/
+}
+footer .footer-right{
+    justify-self: right;
+}
+footer ul li a{
+    margin: 10px;
+    color: #5f6368;
 }
